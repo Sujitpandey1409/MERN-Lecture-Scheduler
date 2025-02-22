@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:5000/api/instructors";
+const API_URL = "https://task-management-system-1-fyvq.onrender.com/api/instructors";
 
 // Fetch all instructors
 export const fetchInstructors = async () => {

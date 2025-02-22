@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:5000/api/courses";
+const API_URL = "https://task-management-system-1-fyvq.onrender.com/api/courses";
 
 export const fetchCourses = async () => {
   const response = await axios.get(API_URL);
