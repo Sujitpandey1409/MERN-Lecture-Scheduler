@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "https://task-management-system-1-fyvq.onrender.com/api/courses";
+const API_URL = `${import.meta.env.VITE_BACKEND_API_URL}/courses`;
 
 export const fetchCourses = async () => {
   const response = await axios.get(API_URL);
