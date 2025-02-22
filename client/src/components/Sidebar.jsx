@@ -24,7 +24,7 @@ export default function Sidebar() {
 
 
   return (
-    <div className="flex items-start">
+    <div className="flex items-start z-[10]">
       {/* Sidebar Toggle Button */}
       <button className="p-3" onClick={() => setIsOpen(!isOpen)}>
         {isOpen ? <X className="absolute rounded z-[100] top-[7px] left-[203px] bg-gradient-to-r from-blue-500 to-purple-500" size={24} /> : <Menu size={24} />}

@@ -40,7 +40,11 @@ export default function Courses() {
 
       <form onSubmit={handleSubmit} className="my-4 space-y-2">
         <input type="text" placeholder="Course Name" value={newCourse.name} onChange={(e) => setNewCourse({ ...newCourse, name: e.target.value })} className="border p-2 w-full" required />
-        <input type="text" placeholder="Level" value={newCourse.level} onChange={(e) => setNewCourse({ ...newCourse, level: e.target.value })} className="border p-2 w-full" required />
+        <select value={newCourse.level} onChange={(e) => setNewCourse({ ...newCourse, level: e.target.value })} className="border p-2 w-full" required>
+          <option value="" disabled>Select Level</option>
+          <option value="Beginner">Beginner</option>
+          <option value="Intermediate">Intermediate</option>
+        </select>
         <input type="text" placeholder="Description" value={newCourse.description} onChange={(e) => setNewCourse({ ...newCourse, description: e.target.value })} className="border p-2 w-full" required />
         <input type="text" placeholder="Image URL" value={newCourse.image} onChange={(e) => setNewCourse({ ...newCourse, image: e.target.value })} className="border p-2 w-full" required />
         <button type="submit" className="bg-blue-500 text-white p-2">{editingCourse ? "Update Course" : "Add Course"}</button>
