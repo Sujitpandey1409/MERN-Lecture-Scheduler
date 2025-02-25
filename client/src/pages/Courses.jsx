@@ -35,19 +35,19 @@ export default function Courses() {
   };
 
   return (
-    <div className="p-5">
+    <div className="p-5 flex flex-col gap-5">
       <h2 className="text-2xl font-bold">Manage Courses</h2>
 
-      <form onSubmit={handleSubmit} className="my-4 space-y-2">
-        <input type="text" placeholder="Course Name" value={newCourse.name} onChange={(e) => setNewCourse({ ...newCourse, name: e.target.value })} className="border p-2 w-full" required />
-        <select value={newCourse.level} onChange={(e) => setNewCourse({ ...newCourse, level: e.target.value })} className="border p-2 w-full" required>
+      <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 bg-white rounded-lg shadow-md">
+        <input type="text" placeholder="Course Name" value={newCourse.name} onChange={(e) => setNewCourse({ ...newCourse, name: e.target.value })} className="border p-2 rounded w-full" required />
+        <select value={newCourse.level} onChange={(e) => setNewCourse({ ...newCourse, level: e.target.value })} className="border p-2 rounded w-full" required>
           <option value="" disabled>Select Level</option>
           <option value="Beginner">Beginner</option>
           <option value="Intermediate">Intermediate</option>
         </select>
-        <input type="text" placeholder="Description" value={newCourse.description} onChange={(e) => setNewCourse({ ...newCourse, description: e.target.value })} className="border p-2 w-full" required />
-        <input type="text" placeholder="Image URL" value={newCourse.image} onChange={(e) => setNewCourse({ ...newCourse, image: e.target.value })} className="border p-2 w-full" required />
-        <button type="submit" className="bg-blue-500 text-white p-2">{editingCourse ? "Update Course" : "Add Course"}</button>
+        <input type="text" placeholder="Description" value={newCourse.description} onChange={(e) => setNewCourse({ ...newCourse, description: e.target.value })} className="border p-2 rounded w-full" required />
+        <input type="text" placeholder="Image URL" value={newCourse.image} onChange={(e) => setNewCourse({ ...newCourse, image: e.target.value })} className="border p-2 rounded w-full" required />
+        <button type="submit" className="col-span-1 md:col-span-2 bg-blue-500 text-white p-2 rounded">{editingCourse ? "Update Course" : "Add Course"}</button>
       </form>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">

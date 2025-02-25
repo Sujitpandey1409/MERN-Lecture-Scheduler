@@ -31,7 +31,7 @@ export default function Sidebar() {
       </button>
 
       {/* Sidebar Navigation */}
-      <div ref={sidebarRef} className={`bg-gray-800 text-white h-screen w-60 p-5 fixed top-0 left-0 transition-transform ${isOpen ? "translate-x-0" : "-translate-x-full"}`}>
+      <div ref={sidebarRef} className={`bg-gray-800 text-white h-full w-60 p-5 fixed top-0 left-0 transition-transform ${isOpen ? "translate-x-0" : "-translate-x-full"}`}>
         <h2 className="text-lg font-semibold mb-4">Admin Panel</h2>
         <nav className="space-y-2">
           <Link to="/admin" className="block py-2 px-4 hover:bg-gray-700 rounded">Dashboard</Link>
